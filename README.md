@@ -29,15 +29,15 @@ synchronisation taken care by a global lock.
 
 Note-1:
 
-I have made a few minor changes to the protocol messgaes, I had to mae these 
-changes account for Python multi-threading, which does not include synchronization
+I have made a few minor changes to the protocol messgaes, I had to make these 
+changes to account for Python multi-threading, which does not include synchronization
 (like Java) and this had to be implemented using Locks:
 
 For example: Each protocol message ends with a semi-colon, this is used to seperate 
 the messages recieved by the client-buffer.
  
 For this reason I would recommend my server and client against each other and 
-not with some other Java code because this will break complatiblity.
+not with some other Java code because this will break compatability.
 
 Note-2:
 ```
@@ -53,7 +53,7 @@ prompt and go over the received-messages from the received-message-buffer.
  
 
 
-PART 4 Example of three clients and one server.
+Example of three clients and one server.
 I have used the default argumenst here. Ideally one much provide the 
 arguments. Otherwise the host will default to localhost, and port to 58732.
 
