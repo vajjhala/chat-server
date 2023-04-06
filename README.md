@@ -1,11 +1,10 @@
 
 
-```python
 The entire code is written in Python3.6. Please use this to thest both the 
 server and the client. 
 
 For each part these are the two programs and their usage:
-
+```
 $ python3 user.py -h
 usage: user.py [-h] [-s HOST] [-p PORT]
 
@@ -22,7 +21,7 @@ optional arguments:
   -p PORT     specify port number
   -c CLIENTS  maximum number of clients
 
-
+```
 The sever uses multithreading with each thread given to a seperate user.
 The client uses two threads to handle receiving and sending seperated, with 
 synchronisation taken care by a global lock.
@@ -41,23 +40,24 @@ For this reason I would recommend my server and client against each other and
 not with some other Java code because this will break complatiblity.
 
 Note-2:
+```
  << is the input prompt
  >> is the output prompt
- 
- See example below.
- Sometimes a received message might be in the buffer and could take a few 
- prompts before it is posted. For this reason press enter(return) key a few times 
- at the input-prompt and the received message will be printed.
- This is essentially done to release the lock from input-prompt to the output
- prompt and go over the received-messages from the received-message-buffer.
+```
+See example below.
+Sometimes a received message might be in the buffer and could take a few 
+prompts before it is posted. For this reason press enter(return) key a few times 
+at the input-prompt and the received message will be printed.
+This is essentially done to release the lock from input-prompt to the output
+prompt and go over the received-messages from the received-message-buffer.
  
 
 
 PART 4 Example of three clients and one server.
+I have used the default argumenst here. Ideally one much provide the 
+arguments. Otherwise the host will default to localhost, and port to 58732.
 
-    I have used the default argumenst here. Ideally one much provide the 
-    arguments. Otherwise the host will default to localhost, and port to 58732.
-    
+```    
     SERVER:
         $ python3 server.py 
         Social App running on HOSTNAME - v-76 
@@ -106,6 +106,7 @@ PART 4 Example of three clients and one server.
         >>#statusPosted
 
     CLIENT-3
+
         $ python3 user.py 
         Enter username: vajj
         >>'vajj' connected to server on ('v-76', 58732)
@@ -118,6 +119,5 @@ PART 4 Example of three clients and one server.
         <<#status Jackson
         <<
         >>#statusPosted
-
-
 ```
+
